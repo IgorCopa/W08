@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Addition</title>
+</head>
+<body>
+    <h1>Odd Numbers Addition</h1>
+    <p>Write an integer number bellow.</p>
+    <input type="text" id="number" placeholder="Your number here..." autofocus>
+    <button type="button" id="btn">Submit</button><br>
+    <div id="output"></div>
+
+    <script>
+    
+        let btn = document.querySelector('#btn');
+        function oddAddition(){
+            let inputElement = parseFloat(document.querySelector('#number').value);
+            let sum = 0;
+            for(let i = 0; i<=inputElement; i++){
+                if(i%2 === 1){
+                    sum += i;
+                }
+            }
+            let output = document.querySelector('#output');
+            output.innerHTML = sum;
+        }
+        btn.addEventListener('click', oddAddition);
+    
+    </script>
+</body>
+</html>
